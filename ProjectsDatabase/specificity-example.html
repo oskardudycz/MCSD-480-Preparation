@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="styles1.css" />
+    <link rel="stylesheet" href="styles2.css" />
+    <style type="text/css">
+        #paragraph {
+            color: blue; /* more specific */
+        }
+        div p {
+            color: red;
+            font-size: 1.5em; /* no other rule */
+        }
+        div[title='MyDiv'] {
+            color: magenta;
+        }
+        #parent {
+            font-size:8px;
+        }
+           /* #parent p {
+                font-size: 20px;
+            } overwrites inherited properties!*/ 
+    </style>
+</head>
+<body>
+    <div>
+        <span><p id="paragraph">paragraph</p></span>
+        <p>any descendant</p>
+    </div>
+    <span id="overwrite">EXAMPLE</span>
+    <div title="MyDiv">My div</div>
+    <div>Empty div</div>
+    <div id="parent"><p>inheritance</p></div>
+</body>
+</html>

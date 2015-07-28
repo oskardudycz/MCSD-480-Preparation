@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Client";
+}
+
+<h2>Client</h2>
+<span>Message</span><input id="mail" type="text" />
+<ul id="inbox"></ul>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var WriteMessage = function (message) {
+            $('#inbox').append('<li>' + message + '</li>');
+            if ($('#inbox').find('li').length > 10) {
+                $('#inbox').find('li:lt(5)').detach();
+            }
+        };
+        var webSocket = window.WebSocket || window.MozWebSocket,
+            ws = new WebSocket('ws://localhost:60000');
+
+        WriteMessage('Attempting to connect...');
+        ws.onopen = function () {
+            WriteMessage('Connection opened');
+        };
+        ws.onclose = function () {
+            WriteMessage('Connection closed');
+        };
+        ws.onmessage = function (e) {
+            WriteMessage(e.data);
+        };
+        ws.onerror = function (e) {
+            WriteMessage('Error');
+        };
+        $('#mail').blur(function () {
+            ws.send(this.value);
+        });
+    });
+</script>
