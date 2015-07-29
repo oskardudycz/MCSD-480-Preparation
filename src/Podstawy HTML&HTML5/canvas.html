@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>Ocena pracowników</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="Author" content="waznygosc"/>
+	<meta name="Description" content="Okresowa ocena pracowników"/>
+	<meta name="keywords" content="LGBS, ocena pracowników, czyste zło"/>
+	</head>
+	
+<body>
+
+
+<canvas id="canvas" width="345" height="345" style="border:1px solid #000000;">
+</canvas>
+<br/>
+
+
+<script type="text/javascript">
+	/*var c = document.getElementById("canvas");
+	var ctx = c.getContext("2d");
+	ctx.moveTo(10,10);
+	ctx.lineTo(50,10);
+	ctx.lineTo(50,50);
+	ctx.lineTo(10,50);
+	ctx.lineTo(10,10);
+	ctx.stroke();*/
+	
+	/*var c = document.getElementById("canvas");
+	ctx = c.getContext("2d");
+	ctx.beginPath();
+	ctx.rect(30,30,200,200);
+	ctx.clip();
+	var img = new Image();
+	img.onload = function(){
+	ctx.drawImage(img,0,0);
+	ctx.lineWidth = 10;
+	ctx.strokeStyle = "#aaaaaa";
+	ctx.strokeRect(30,30,200,200);
+	}
+	img.src = './image.jpg';*/
+	
+	
+	
+	var x=0, y=0, frame;
+	var c = document.getElementById("canvas");
+	ctx = c.getContext("2d");
+	var draw = function(){
+	if(x<=c.width){
+	ctx.clearRect(0,0,345,345);
+	ctx.strokeStyle = 'rgb(150,150,0)';
+	ctx.lineWidth = 8;
+	ctx.beginPath();
+	ctx.moveTo(0,0);
+	ctx.lineTo(x+=5,y+=5);
+	ctx.stroke();
+	}
+	else{
+	clearInterval(frame);
+	}
+	}
+	frame = setInterval(function(){draw();},25);
+	
+
+	</script>
+<footer><br/><hr/>Sponsored by LGBS</footer>
+
+
+</body>
+</html>

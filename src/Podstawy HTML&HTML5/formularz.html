@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>Ocena pracowników</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="Author" content="waznygosc"/>
+	<meta name="Description" content="Okresowa ocena pracowników"/>
+	<meta name="keywords" content="LGBS, ocena pracowników, czyste zło"/>
+
+	
+</head>
+<body>
+
+
+<div>
+
+<h1>Ocena pracownika</h1>
+<form>
+<fieldset>
+<label for="name">Nazwisko:</label><br/>
+<input id="name"  pattern="[a-zA-Z]{5,}" type="text" placeholder="Nazwisko"  required
+data-role="validate"
+title="nazwisko"
+data-content="jest wymagany i musi byc w poprawny formacie dłuższy od 5"/><br/>
+
+
+<label for="email">Email:</label><br/>
+<input id="email" type="email" required/><br/>
+<div class="validation-message"> Adres email jest wymagany</div>
+
+<label for="stanowisko">Stanowisko:</label><br/>
+<input ip="stanowisko" list="stanowiska" required
+data-role="validate"
+title="stanowisko"
+data-content="jest wymagany"/><br/>
+
+
+<datalist id="stanowiska">
+	<option value="Bossu"/>
+	<option value="Hejter"/>	
+	<option value="Posłuszny pracownik boss'a"/>
+	<option value="EksPraktykant"/>
+	<option value="Praktykant"/>
+	
+</datalist>
+
+<label for="url">Strona:</label><br/>
+<input id="url" type="url" required
+data-role="validate"
+title="strona"
+data-content="jest wymagany i musi byc podany adres url"/><br/>
+
+
+<label for="tel">Nr tel.:</label><br/>
+<input id="tel" type="tel" required
+data-role="validate"
+title="telefon"
+data-content="jest wymagany i musi byc podany numer"/><br/>
+
+
+<label for="date">Data zatrudnienia:</label><br/>
+<input id="date" type="date" value="1999-09-09"/><br/>
+<div class="validation-message"> Błąd walidacji</div>
+
+<label for="range">Skill:</label><br/>
+<input id="range" type="range"
+min="0" max="10" step="1" value="2"/><br/>
+<div class="validation-message"> Błąd walidacji</div>
+
+<label for="number">Staż pracy:</label><br/>
+<input id="number" type="number" min="0" max="100" step="1" /><br/>
+<div class="validation-message"> Błąd walidacji</div>
+<button id="checkValidation">Change</button>
+</fieldset>
+</form>
+
+<script type="text/javascript">
+	
+	
+	var validate = function(){
+	$(".validation-message span").addClass('hide');
+	document.getElementById('name').checkValidity();	
+	}
+	validationFail=function(e){
+	var element= e.srcElement,
+	validity = elemnt.validity;
+	if(!validity.valid){
+	ruleNames.forEach(function(ruleName){
+	checkRule(validity,ruleName,element);
+	
+	});
+	e.preventDefault();}
+	},
+	checkRule = function(state, ruleName, ele){
+	
+	if(state[ruleName]){
+	$(ele).next().find('[data-rule"'+ruleName+'"]').removeClass('hide');}};
+
+	
+	//$('checkValidation').click(validate);
+	
+	
+	</script>
+
+</div>
+
+<footer><br/><hr/>Sponsored by LGBS</footer>
+
+</body>
+</html>
