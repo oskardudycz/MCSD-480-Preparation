@@ -1,0 +1,45 @@
+#mainGrid {
+    display: grid;
+    -ms-grid-columns: 150px 150px 150px 150px;
+    -ms-grid-rows: 75px 75px;
+}
+#mainGrid > div:nth-child(1){
+    -ms-grid-column: 1;
+    -ms-grid-row:1;
+    background-color: blue;
+}
+#mainGrid > div:nth-child(2){
+    -ms-grid-column:2;
+    -ms-grid-row:1;
+    background-color: aqua;
+}
+#mainGrid > div:nth-child(3){
+    -ms-grid-column: 3;
+    -ms-grid-row:1;
+    background-color: red;
+}
+#mainGrid > div:nth-child(4){
+    -ms-grid-column: 4;
+    -ms-grid-row:1;
+    background-color: green;
+}
+#mainGrid > div:nth-child(5){
+    -ms-grid-column: 1;
+    -ms-grid-row:2;
+    background-color: magenta;
+}
+#mainGrid > div:nth-child(6){
+    -ms-grid-column: 2;
+    -ms-grid-row:2;
+    background-color: yellow;
+}
+#mainGrid > div:nth-child(7){
+    -ms-grid-column: 3;
+    -ms-grid-row:2;
+    background-color: orange;
+}
+#mainGrid > div:nth-child(8){
+    -ms-grid-column: 4;
+    -ms-grid-row:2;
+    background-color: olive;
+}

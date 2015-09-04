@@ -1,0 +1,35 @@
+.flexbox1 {
+    display: flex;
+    flex-direction: row;
+    justify-content:center ;
+    /*flex-wrap: wrap;*/
+    align-items: center;
+    border: 1px solid black;
+    margin-top: 100px;
+    min-height: 160px;
+}
+
+.flexbox1 > div {
+    min-width: 80px;
+    min-height: 80px;
+    border: 1px solid black;
+    margin: 5px;
+    color:white;
+}
+
+.flexbox1 > div:nth-child(1) {
+    background-color: green;
+    order: 2;
+    /*flex-grow: 2;*/
+    /*align-self: flex-start;*/
+}
+.flexbox1 > div:nth-child(2) {
+    background-color: yellow;
+    order: 3;
+    /*flex-grow: 3;*/
+}
+.flexbox1 > div:nth-child(3) {
+    background-color: red;
+    order: 1;
+    /*flex-grow: 1;*/
+}

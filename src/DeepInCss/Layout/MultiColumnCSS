@@ -1,0 +1,13 @@
+#c_lo {
+    width: 80%;
+    height: 400px;
+    border: 1px solid black;
+    column-count: 5;
+    column-rule-color: black;
+    column-rule-style: dashed;
+    column-rule-width: 2px;
+    column-gap: 5px;
+}
+.headers {
+    text-align:center;
+}
