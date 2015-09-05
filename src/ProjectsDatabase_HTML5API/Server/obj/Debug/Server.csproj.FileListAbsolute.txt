@@ -1,0 +1,7 @@
+C:\Users\mpiotrowski\Documents\Visual Studio 2012\Projects\ProjectsDatabase\Server\bin\Debug\Server.exe.config
+C:\Users\mpiotrowski\Documents\Visual Studio 2012\Projects\ProjectsDatabase\Server\bin\Debug\Server.exe
+C:\Users\mpiotrowski\Documents\Visual Studio 2012\Projects\ProjectsDatabase\Server\bin\Debug\Server.pdb
+C:\Users\mpiotrowski\Documents\Visual Studio 2012\Projects\ProjectsDatabase\Server\bin\Debug\Fleck.dll
+C:\Users\mpiotrowski\Documents\Visual Studio 2012\Projects\ProjectsDatabase\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\mpiotrowski\Documents\Visual Studio 2012\Projects\ProjectsDatabase\Server\obj\Debug\Server.exe
+C:\Users\mpiotrowski\Documents\Visual Studio 2012\Projects\ProjectsDatabase\Server\obj\Debug\Server.pdb
