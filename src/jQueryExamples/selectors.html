@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery Examples</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.js"></script>
+</head>
+<body>
+    <style type="text/css">
+        span, div {
+            color: blue;
+        }
+        span.hidden {
+            visibility: hidden;
+        }
+        li:odd { /* jquery ul > li:odd */
+            background-color: magenta;
+        }
+    </style>
+    <script type="text/javascript">
+        (function ($) {
+            $(document).ready(function () {
+                var originalHtml = $('body').html(),
+                    element,
+                    notification = $('<span class="notification">Notice the change here</span>');
+
+                $('#clear').on('click', function () { $('body').html(originalHtml); });
+
+                $('body').prepend('Document is ready.');
+
+
+                $('*').click(function () {
+                    $('span.notification').detach();
+                });
+
+                $('#examples li:nth-child(1)').on('click', function () {
+                    $('#examples li').each(function () {
+                        element = $(this);
+                        element.append("<span> We get node's html from context: <strong>" + element.html() + '</strong></span>');
+                    });
+                    $(this).off('click');
+                });
+
+                $('#examples li:nth-child(2)').on('click', function () {
+                    $('span, div').css({
+                        'color': 'red',
+                        'background-color': 'green'
+                    });
+                    $(this).off('click');
+                });
+
+                $('#examples li:nth-child(3)')
+                    .mouseover( function () {
+                        $(this).parent().find('span.hidden').css('visibility', 'visible');
+                    })
+                    .mouseout( function () {
+                        $(this).children('span.hidden').css('visibility', 'hidden');
+                    });
+
+                $('#examples li:nth-child(4) > button')
+                    .click(function () {
+                        $('body > div:not([id])')
+                            .find('input[name="' + $(this).parent().find('input').val() + '"]')
+                            .val('0')
+                            .parent().append(notification);
+                        return false;   //e.preventDefault
+                    });
+                $('#examples li:nth-child(5)')
+                    .click(function () {
+                        $('#inputs').find(':input').val('altered content').parent().append(notification);
+                        return false;
+                    });
+
+                var borderByTitle = function (modificator, title) {
+                    $('#hrefs a[title' + modificator + '="' + title + '"]').css('border', '1px solid red').parent().append(notification);
+                    return false;
+                }
+                $('#examples li:nth-child(6)')
+                    .click(function () {
+                        borderByTitle('^', 'href');
+                    });
+                $('#examples li:nth-child(7)')
+                    .click(function () {
+                        borderByTitle('*', 'navigation');
+                    });
+
+            });
+        })(window.jQuery);
+    </script>
+</body>
+    <div id="examples"><button>CLEAR</button></div>
+    <ul id="examples">
+        <li>.each <span class="hidden">Oops, what am I doing here?</span></li>
+        <li>colour <span>spans</span> and <div>divs</div></li>
+        <li>hover <span class="hidden">great job</span></li>
+        <li>zero inputs with <input type="text" /> attribute <button>Go</button></li>
+        <li>:input selector</li>
+        <li>color 'starts with' selected</li>
+        <li>color 'contains' selected</li>
+    </ul>
+    <hr />
+    <div>
+        <input name="Identifier" type="text"/>
+        <input type="text" value="-1"/>
+        <input name="Identifier" type="text" value="-2" />
+    </div>
+    <hr />
+    <div id="inputs">
+        <input value="example input" />
+        <textarea>example text</textarea>
+    </div>
+    <hr />
+    <div id="hrefs">
+        <a title="href_navigation1" href="#">Navigation 1</a>
+        <a title="navigation2" href="#">Navigation 2</a>
+        <a title="href_navigation3" href="#">Navigation 3</a>
+    </div>
+    <hr />
+</html>

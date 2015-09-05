@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery Examples</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.js"></script>
+</head>
+<body>
+    <style type="text/css">
+        .bgcolor {
+            background-color: blue;
+        }
+        .bordered {
+            border: 1px solid red;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script type="text/javascript">
+        (function ($) {
+            $(document).ready(function () {
+                alert('now will copy content from external html file');
+                $('#container').load('data.html #container');
+
+                $('#load-json').click(function () {
+                    $.getJSON('./file.json', function (data) {
+                        console.log(data.FirstName + ' ' + data.LastName);
+                    });
+                });
+            });
+        })(window.jQuery);
+    </script>
+</body>
+    <div id="container">Hello</div>
+    <button id="load-json">Load JSON</button>
+</html>

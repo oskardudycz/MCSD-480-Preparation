@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery Examples</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.js"></script>
+</head>
+<body>
+    <style type="text/css">
+        .bgcolor {
+            background-color: blue;
+        }
+        .bordered {
+            border: 1px solid red;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+    <script type="text/javascript">
+        (function ($) {
+            $(document).ready(function () {
+                var originalHtml = $('body').html(),
+                    element,
+                    notification = $('<span class="notification">Notice the change here</span>');
+
+                $('#clear').on('click', function () { $('body').html(originalHtml); });
+
+                $('body').prepend('Document is ready.');
+
+
+                $('*').click(function () {
+                    $('span.notification').detach();
+                });
+                $('#toggle').click(function () {
+                    $(this).toggleClass('bordered');
+                });
+                $('#add').click(function () {
+                    $(this).addClass('add');
+                    $(this).append(' classes on element: ' + $(this).attr('class'));
+                });
+                $('#two-events').on('mouseenter mouseleave', function () {
+                    $(this).find('ul').toggleClass('hidden');
+                });
+                $('#mytable tr').on('click', function () {
+                    alert('row of the table clicked');
+                });
+
+                $('#mytable2').on('click mouseover', 'tr', function (e) {
+                    if (e.type == 'click') {
+                        alert('row of the table clicked');
+                    }
+                });
+
+                $('.mytable').append('<tr><td>X</td><td>Z</td></tr>');
+            });
+        })(window.jQuery);
+    </script>
+</body>
+    <div id="clear"><button>CLEAR</button></div>
+    <ul id="examples">
+        <li id="toggle" class="bgcolor bordered">toggleMe</li>
+        <li id="add">addClass</li>
+        <li id="old">old fashioned event handling</li>
+        <li id="two-events">two events in single on<ul class="hidden"><li>item1</li><li>item2</li></ul></li>
+    </ul>
+    <hr />
+    <table class="mytable" id="mytable">
+        <tr><td>A</td><td>B</td></tr>
+        <tr><td>E</td><td>F</td></tr>
+    </table>
+    <table class="mytable" id="mytable2">
+        <tr><td>A</td><td>B</td></tr>
+        <tr><td>E</td><td>F</td></tr>
+    </table>
+    <hr />
+    <script type="text/javascript">
+        if (document.addEventListener) {
+            //document.addEventListener('click', function () { alert('old clicked'); })
+        }
+        else {
+            //document.attachEvent('click', function () { alert('old clicked'); });
+        }
+    </script>
+</html>
