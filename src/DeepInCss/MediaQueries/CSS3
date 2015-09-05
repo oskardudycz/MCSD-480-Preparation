@@ -1,0 +1,2 @@
+@import url('CSS') (min-width:1024px) and (min-height: 500px);
+@import url('CSS2') (max-width:600px) and (max-height: 500px);

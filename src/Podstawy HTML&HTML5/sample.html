@@ -1,0 +1,214 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>Ocena pracowników</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="Author" content="waznygosc"/>
+	<meta name="Description" content="Okresowa ocena pracowników"/>
+	<meta name="keywords" content="LGBS, ocena pracowników, czyste zło"/>
+	<script type="text/javascript">
+	window.onload=function(){
+	alert("ocena");
+	
+	var tdNumber = document.querySelectorAll('td'),
+	log = document.querySelector('#tdNumber');
+	log.innerText = 'jest komórek ' + tdNumber.length;
+	var trNumber = document.querySelectorAll('tr');
+	log = document.querySelector('#trNumber');
+	log.innerText = 'jest wierszy ' + trNumber.length;
+	var forEach = Array.prototype.forEach;
+	forEach.call(tdNumber, function(e){
+	e.innerText += ' bonus';	
+	});
+	for(var i=0,len = tdNumber.length;i<len;i++){
+		tdNumber[i].innerText +='|pętlą';
+	}
+	}
+	</script>
+<base href="http://kwejk.pl/"/>
+</head>
+<body>
+<h1 align="center">Ocena okresowa agenda</h1>
+
+<div id="menu"><a href="#poczatek">Początek tekstu</a> 
+<a href="#first">W tekście</a> <a href="#second">środek tekstu</a> 
+<a href="#p">Skróty</a> <a href="#linki">Linki</a>
+<a href="#tablica">Tablica</a>
+<a href="#film">Film</a>
+<a href="./formularz.html">Formularz Oceny</a>
+
+<hr/>
+
+
+
+
+<h2><a name="skroty">Ważne skróty<a></h2>
+
+<ul name="p" type="circle">
+	<li><acronym title="HyperText Markup Language">HTML</acronym></li>
+	<li><acronym title="Hypertext Transfer Protocol">HTTP</acronym></li>
+		<ul class="list-style-type:square">
+			<li><abbr title="Uniform Resource Identifier">URI</abbr></li>
+			<li><abbr title="Uniform Resource Locator">URL</abbr></li>
+		</ul>
+	</ul>
+	</hr>
+	<h2><a name="linki">Ciekawe linki</a></h2>
+	<ol>
+	<li><a href="http://www.w3.org/QA/2002/04/valid-dtd-list.html">http://www.w3.org/QA/2002/04/valid-dtd-list.html </a></li>
+	<li><a href="http://validator.w3.org/#validate_by_input">http://validator.w3.org/#validate_by_input</a> </li>
+	
+	</ol>
+	<br/>
+	<dl>
+	<dt>Tagi HTML</dt>
+	<dd><a href="http://www.w3schools.com/tags/">http://www.w3schools.com/tags/</a></dd>
+	<dt>Rodzaje list</dt>
+	<dd><a href="http://www.w3schools.com/html/html_lists.asp">http://www.w3schools.com/html/html_lists.asp</a></dd>
+	<dt>Wideo tag HTML5</dt>
+	<dd><a href="http://www.w3schools.com/tags/tag_video.asp">http://www.w3schools.com/tags/tag_video.asp</a></dd>
+	<dt>Audio tag HTML5</dt>
+	<dd><a href="http://www.w3schools.com/tags/tag_audio.asp">http://www.w3schools.com/tags/tag_audio.asp</a></dd>
+		<dt>Red Alert z wykorzystaniem Canvas</dt>
+	<dd><a href="http://www.adityaravishankar.com/projects/games/command-and-conquer/">http://www.adityaravishankar.com/projects/games/command-and-conquer/</a></dd>
+	
+
+	</dl>
+	
+	<h2><a name="tablica">Tablica</a></h2>
+	<table id="p" align="center" width="25%" cellpadding="5px" cellspacing="5px" summary="Tablica do oceny" border="2">
+	<caption>Nagłówek</caption>
+		<thead>
+			<tr>
+				<th>Osoba</th>
+				<th>Stanowisko</th>
+				<th>Projekt</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Oskar</td>
+				<td>Bossu</td>
+				<td>wszystkie na raz</td>
+			</tr>
+			<tr>
+				<td>Mateusz J.</td>
+				<td>Hejter</td>
+				<td>I tak wykończy szefa tego projektu</td>
+			</tr>
+			<tr>
+				<td>Toudi</td>
+				<td>Posłuszny pracownik boss'a</td>
+				<td>Gdzie każą tam pójdzie</td>
+			</tr>
+					<tr>
+				<td>Przemek</td>
+				<td>EksPraktykant</td>
+				<td>Vulcan to nie firma to stan umysłu</td>
+			</tr>
+			<tr>
+				<td>Igor</td>
+				<td >Praktykant</td>
+				<td></td>
+			</tr>
+	
+			<tr>
+				<td>Marek</td>
+				<td>EksPraktykant</td>
+				<td>Za ścianą</td>
+	
+			</tr>
+		<tbody>
+		<tfoot>
+		<tr>
+		<td colspan="4">Stopka tabelki</td></tr>
+		</tfoot>
+	<table>	
+	
+	<p id='tdNumber'></p>
+	<p id='trNumber'></p>
+	<h2><a name="film">Film & Audio</a></h2>
+	<video align="center" controls loop preload width="320">
+	<source src="./film.mp4"  type="audio/mp4"/>
+	<source src="./film.avi"/>
+	<source src="./film.webm"  type="audio/webm"/>
+	<source src="./film.wmv"/>
+	<p>Przeglądarka nie wspiera filmu</p>
+	</video>
+	<br/>
+	<audio align="center" controls="true">
+	<source src="./audio.mp3" type="audio/mpeg"/>
+	<source src="./audio.wav" type="audio/wav"/>
+	<p>Przeglądarka nie wspiera audio</p>
+	</audio>
+	
+	<h2><a name="poczatek">Przeczytaj ten długi tekst</a></h2>
+<br/>
+<hr/>
+<br/>
+<br/>
+	<div id="container">
+<strong>Dlaczego kogut pieje przez cale zycie? </strong>- Bo ma wiele zon i ani jednej tesciowej. Co to jest medycyna? - Jest to nauka, 
+ktora pomaga choremu znalezc sie na tamtym swiecie... A wiecie jaki jest najlepszy srodek na lysienie? - Srodek glowy...
+ Jaka choroba jest najbardziej niebezpieczna? - Milosc, bo od razu kladzie do lozka... Jak mozna stracic na wadze? - Kupic 
+ wage za sto tysiecy, a sprzedac za piecdziesiat... Wiecie jak sie nazywa Ruski ksiadz? - Pop. A wiecie jak sie nazywa Ruski
+ organista? - Pop music... Czym sie rozni Syrenka od krowy ? - Jak Syrenka nawali to stoi, a jak krowa nawali to pojdzie. Jaki
+ miesien najbardziej pracuje podczas stosunku plciowego ? - Miesien odbytu - zeby nie zesrac sie ze szczescia. Jak sie nazywa 
+ najnowszy gaz szlachetny? - Dwupierdzian kapustny. Co mowi kanapka do pijaka? - Zaraz wroce... Co to jest "nic"? - Pol litra na 
+ dwoch. Ulubiony program dzieci? - Doomowe przedszkole. Po czym poznac rosyjskiego sportowca? - Dlubie w nosie oszczepem... Jak sie
+ nazywa Niemiec pod woda? - Peryszkop. Jak zakonczy sie ostatni odcinek powiesci radiowej "W Jezioranach"??? - Popatrz, Marys, na niebo. 
+ Jaki wielki grzyb... Z czego sklada sie wegiel? - Z samochodu do piwnicy. A skad sie bierze rtec? - Z rozbitych termometrow... Jak sie 
+ nazywa babcia klozetowa? - Pisuardessa. A jak dziadek klozetowy? - Kalboj. Co mozna z jednej strony lizac, a z drugiej przyklepywac ? - 
+ Znaczek ! Jak sie nazywa pol Niemca? - Szkopół. Wiecie co dostaje gornik po smierci ? - 3 dni urlopu, a potem z powrotem pod ziemie.... 
+ Dlaczego Robin Hood? - Bo malo jadl. Co mowi kat ustawiajac skazanca pod szubienica ? - Glowa do gory ! Co otrzymamy, gdy dodamy do wodki 
+ czystej plynu KOP ULTRA? - Wodke ULTRA CZYSTA. A co otrzymamy, gdy do wodki dodamy wody z ogorkow? - Wodke i zagryche w jednym! Wiecie, jak 
+ zaczynaja sie przepisy w szkockiej ksiazce kucharkiej? - Pozycz od sasiada pol kilo maki... Po co slon ma trabe ? - Zeby sie tak GWALTOWNIE 
+ <pre>nie zaczynal... Co to jest bigos na winie ? - Co sie nawinie to do bigosu! Co to jest lopata ? - Reczny przenosnik materialow sypkich. Co 
+ otrzymamy, gdy skrzyzujemy ze soba: krowe, konia, slonia, zyrafe, wilka, mrowke, wrone i bociana? - Kwadratowego zajaca z marchewka w reku. 
+ Jak sie nazywa trzech facetow pod prysznicem? - Wet Wet Wet. Jak sie nazywa katar z dwoch dziurek naraz? - Bismarck. Jak wyglada milosc w 
+ malzenstwie? - To proste: on kocha ja za-zarcie, a ona jego za-wziecie. Czym sie rozni L.O. od domu wariatow? - W domu wariatow przynajmniej 
+ personel jest normalny. Ktora laska jest najbardziej aerodynamiczna? - Ta, która nie stawia żadnego oporu. Kto jest najlepszym matematykiem na </pre>
+ swiecie? - Kobieta: dodaje sobie urody, odejmuje lat, mnozy dzieci, dzieli loze. A jaki jest najniebezpieczniejszy pocisk na swiecie? - Tez kobieta: 
+ wpada w oko, rani serce, szarpie nerwy, dziurawi kieszen i wychodzi bokiem. Wiecie czym sie rozni sex od klockow Lego? - Nie? To bawcie sie dalej klockami!
+ <p><a name="first" title="POczątek strony">Co to jest gora i w jaki sposob? - Gora jest to uksztaltowanie terenu w sposob wypukly. Co to jest: gdacze i swieci? - Kura po kijowsku. Co powiedzial jez </a></p>
+ schodzac ze szczotki ryzowej??? - Pozory myla... Na co umarl Stalin? - Na szczescie! Co to za zagadka? Czterech w pokoju, a jeden pracuje? - Trzech urzednikow 
+ pije kawe, a wentylator pracuje. Co nalezy zrobic, gdy golab napaskudzi na glowe??? - Podziekowac Bogu, ze nie dal skrzydel krowom... Co to jest, wisi na scianie i
+ placze? - du*a, nie alpinista. Co to jest: biale, pstryk, czerwone? - Pudelek sasiadki w sokowirowce. Jak dlugo zyje mysz? - To zalezy od kota. Wiecie, jak sie nazywa
+ wynalazca pisuarow? - Ley_na_mour! A wiesz kto wymyslil spodnie? - Radziecki uczony I. Golodupcew. Co maja wspolnego 364 prezerwatywy z opona? - A good year. Jaki okrzyk 
+ potrafi obudzic rekina z poobiedniej drzemki??? - Czlowiek za burta!!!! Co powstanie z polaczenia dwoch stonog??? - Zamek blyskawiczny. Jak najlatwiej zabic strusia? - 
+ Przestraszyc go na betonie. Czym sie rozni kobieta od slonca? - Gdy slonce zachodzi to widac, a jak kobieta zachodzi to nie. Dlaczego psy australijskie sa najszybszymi psami 
+ na swiecie? - Poniewaz w Australii odleglosci miedzy drzewami sa ogromne. Dlaczego w Rzymie jest tak duzo kosciolow? - Zeby piesi mogli sie pomodlic przed przejsciem na druga 
+ strone ulicy. Co ma dziesiec tysiecy kalorii? - Piec tysiecy Tic-tacow. Jak dzialaja najnowsze ruskie spadochrony? - Otwieraja sie przy uderzeniu. Jak poznac, czy pasztet zajeczy 
+ jest rzeczywiscie z zajaca? - Dac komus do sprobowania. Jak zajeczy, to nie zajeczy, a jak nie zajeczy, to zajeczy. Czy wiesz, ze niedawno w Polsce zginal chlop pijac mleko? - Krowa
+ sie na niego przewrocila. Jaka jest najwieksza anomalia fizjologiczno-polityczna? - Czlonek z ramienia. Czy kobieta po 60-tce moze miec prostopadly do ciala biust? - Tak, jak
+ zmywa podloge. Co zrobil Sobieski po objeciu tronu ??? - Usiadl na nim ! Co to jest lufa armatnia ??? - Pret powietrza oblany olowiem. Dlaczego w maluchach nie montuja wyciszaczy?
+ - Bo jak sie wsiada to sie kolanami uszy zatyka. Co robi szklarz, gdy nie ma szkla ??? - Pije z gwinta.... Z kim wchodzi kotek na plotek ? - Z mruga... Czym sie rozni slon od parawanu ??? - 
+ Parawanem mozna zaslonic, a sloniem nie mozna zaparawanic... Jaka jest definicja "wymiany opinii"? - Kiedy idziesz do szefa ze swoja opinia, a wychodzisz z jego. Ktore zwierze jest najpozyteczniejsze ? - 
+ Baran - bo z niego uzywa sie nawet nazwy... Jak sie nazywaja ludzie mieszkajacy ze zwierzatkami? - Gucwinscy. Panstwo w europie na K ? - Kowalscy. Co wspolnego ze soba maja pijana kobieta i fiat 126P ? - 
+ I jedno i drugie wstyd prowadzic. Co to jest chodzi po scianie i gra? - Mucha z walkmanem na uszach. Co to jest? Najpierw bierze sie do reki, a potem do buzi? - Papieros. Co to jest autosugestia ? - 
+ To jest sugerowanie sobie, ze sie ma auto. Jak sie nazywa kobieta (slawna) tanczaca w balecie ? - Prima balerina !! A facet ?? - Prima baleron !!!! Jakie ciastka jedza hydraulicy?? - Rurki A gorale ? -
+ Karpatki A stare dziadki ? - Pierniki Co by bylo gdyby nie bylo kobiet? - Czlowiek udomowilby inne zwierzatko. Czy wiecie czym sie rozni komunizm od kolejki linowej w gorach ??? - Niczym. I tu i tu widoki 
+ sa piekne, rzygac sie chce, a wysiasc nie mozna. Dlaczego orkiestra nie gra na moscie? - Bo most to nie instrument! Gdzie sa najtansze dziewczyny ? - W Rosji. Co druga to Tania. Jak sie nazywa maly rosjanin? 
+ - Mikrusek. Czym sie rozni policjant od ksiedza? - Ksiadz mowi "Pan z wami", a policjant "Pan z nami" A co to jest krzyzowka krowy z zolwiem ? - Ciele w kasku ! A krzyzowka weza z jezem? - Drut kolczasty 
+ Co mowi dzem jak sie go otwiera? - "Dzem dobry" Czym sie rozni saper od elekrtyka? - Wlasciwie to niczym , bo i saper i elektryk myli sie tylko raz... ale elektryk jeszcze przed smiercia ZATANCZY !
+ A czy akumulator moze zabic czlowieka ? (przypominam, napiecie 12V) - zalezy z jakiej spadnie wysokosci hehe :) Czym sie rozni ryba pila od czlowieka? - Tym, ze ryba pila a czlowiek pil, pije i pic bedzie! 
+ <p><a name="second" title="Środek strony">Czym sie roznie wegiel kamienny od kamienia wegielnego..? - Tym samym co picie w szczawnicy od szczania w piwnicy Z czego sklada sie lyzka? </a></p>- Z drazka prowadzacego i komory zupnej! Co to jest : wisi u sufitu i 
+ grozi? - Zarowka firmy OSRAM! Czy wiesz, dlaczego slonie trabia? - Bo maja traby! - A nie! Bo nie potrafia grac na fortepianie! Dlaczego niedzwiedz chodzi w futrze? - Bo jak by wygladal w plaszczu przeciwdeszczowym.
+ Co jest calkowita niewygoda? - Lezec na samym dole w zbiorowej mogile. Male, biale, okragle i pedzi? - tabletka przeczyszczajaca... Z czego sklada sie strzelec ? Strzelec sklada sie z : - strzelca wlasciwego, karabinu,
+ okopu Z czego sklada sie pies wojskowy ? Pies wojskowy sklada sie z : - psa wlasciwego, smyczy laczacej, prowadzacego Dlaczego zycie na ziemi jest takie kosztowne? - Bo w koszty te wliczony jest bilet na podroz dookola
+ slonca... Czy Ewa zdradzala Adama ? - Tego dokladnie nikt nie stwierdzil, ale niektorzy uczeni uwazaja, ze czlowiek pochodzi od malpy... Jaka jest roznica miedzy koniem i koniakiem? - Taka sama jak miedzy rumem i rumakiem.
+ Co to jest kapitalizm ? - wyzysk czlowieka przez czlowieka A co to jest komunizm ? - na odwrot Jaki jest najlepszy srodek antykoncepcyjny? - Szklanka zimnej wody. Przed czy po? - Zamiast. Jakie jest lekarstwo na milosc od 
+ pierwszego wejrzenia? - Spojrzec drugi raz... Co to jest dziewica? - Niemowle plci zenskiej. Jaka jest najwyzsza forma zycia zwierzecego? - Zyrafa. Za co Kain zabil Abla ? - Za stare dowcipy !!!. Jaka jest roznica miedzy 
+ demokracja a demokracja socjalistyczna? - taka jak miedzy krzeslem i krzeslem elektrycznym! Dlaczego bocian ma czerwony dziob? - Bo go krew zalewa jak mu sie wymawia ze przynosi dzieci. Jak brzmialo AUTENTYCZNE haslo 
+ reklamowe polskich prezerwatyw przed wojna? - Predzej peknie Ci serce!!! Dlaczego w morzu jest woda? - Zeby statki nie kurzyly przy hamowaniu. Zielone i ma kolka? - ZABA - kolka byly dla zmyly Male, czerwone i stoi na polce? - zielony samochodzik... Czym sie rozni golab od zwlaszcza ? - Golab siada na parapecie, a zwlaszcza na dachu ! Skad wyjezdza czolg ? - Czolg wyjezdza z nienacka.(wiem, ze to niegramatycznie ale inaczej nie byloby dowcipu) Czy krokodyl jest bardziej dlugi czy zielony? - Zielony, bo dlugi jest tylko od pyska do ogona a zielony jeszcze po bokach co powinien wiedziec student? - student powinien wiedziec wszystko co powinien wiedziec magister? - magister powinien wiedziec wszystko ze swojej dziedziny co powinien wiedziec doktor? - doktor powinien wiedziec wszystko ze swojej specjalizacji co powinien wiedziec dr. hab? - dr. hab powinien wiedziec w ktorej ksiazce co sie znajduje co powinien wiedziec docent? - docent powinien wiedziec gdzie jest biblioteka co powinien wiedziec profesor? - profesor powinien wiedziec gdzie sa docenci... ;-) Jak wyglada ges? - Ges wyglada oczami! Od czego herbata jest slodka? - Wiadomo - od mieszania. Po co w takim razie sypie sie cukier? - Zeby bylo wiadomo jak dlugo mieszac. A po co myje sie szklanki? - Zeby sie zmiescilo wiecej herbaty. Z czego sie sklada dzida krotka bojowa ogolnowojskowa? - z przeddzidzia, sroddzidzia, i zadzidzia. Z czego sie sklada przeddzidzie dzidy krotkiej bojowej ogolnowojskowej? - z przeddzidzia przeddzidzia, sroddzidzia przeddzidzia, i zadzidzia przeddzidzia. Czym sie rozni wrobelek ? - Ze ma jedna nozke bardziej od drugiej. Co to jest : zielone,czerwone,niebieski a jak podskoczy biale??? - nie wiesz? ja tez nie ale fajnie zmienia kolory... Wiecie ile rodzi sie ludzi w Chinach? - Miliard w srode, miliard w sobote. A wiesz, co to jest : lata po pokoju i robi yzb, yzb, yzb... - Mucha na wstecznym biegu. Dlaczego Ala ma kota ? - Bo Sierotka ma Rysia ! Dlaczego Mis Uszatek spi na podlodze ? - Bo klapniete lozko ma ! Co Mis Uszatek je na kolacje? - Pora na dobranoc... Jak sie nazywa maly Turek? - miniaturek Jak sie nazywa syn optyka? - synoptyk Co to jest : zolte i kopie ? - Koparka Co to jest : czarne i kopie ? - Cien koparki Czym sie roznia szminki od inzynierow? - Szminki mamy do ust a inzynierow do d**y Wiecie jaka jest roznica miedzy kaczka a kobieta? - Kaczka moze Ci zafajdac cale podworko, a kobieta cale zycie Czym sie rozni kura od studenta? - Kura znosi jaja, a student musi znosic wszystko Dlaczego mrowki tak szybko sie rozmnazaja? - Bo jeszcze nikt nie wymyslil takich malych prezerwatyw! Co to jest : lezy w trawie i nie dycha ? - Dwie dychy. Co to jest : wisi na scianie i smierdzi ? - Zegar ze zdechla kukulka. Nie jedza, nie pija a rosna? - Ceny. Jak sie nazywa zona popa? - Poparzona. Dlaczego chirurg zawsze peruje w maseczce? - Zeby nie oblizywal skalpela. Co to jest : Jak idzie to spiewa a jak stoi to smieci ?? - Pielgrzymka.. Jaki jest wzor chemiczny wody swieconej? - H2O ZChN. Dlaczego Rosjanie tak dobrze graja w hokeja? - Bo po zwyciestwie rewolucji pazdziernikowej Lenin zostawil ich na lodzie! Czym sie rozni dlugopis od trumny? - Wkladem.
+</div>
+
+<footer><br/><hr/>Sponsored by LGBS</footer>
+
+
+
+
+</body>
+</html>
