@@ -1,0 +1,39 @@
+*{
+    display: inline-block;
+}
+div{
+    height:200px;
+    width:200px;
+    margin: 3rem;
+}
+
+.blue{
+    background-color: dodgerblue;
+    position: absolute;
+    left:0;
+    top:0;
+    margin: 0;
+}
+.red{
+    background-color: red;
+}
+.border{
+    border: 1rem groove blueviolet;
+}
+.shadow{
+    box-shadow: 10px 10px 10px;
+
+}
+.gradient{
+    background-image: linear-gradient(to right, red, #f06d06, rgba(255, 255, 0, 1), green);
+    /*left:-10px;*/
+}
+
+.container{
+    border: 0.1rem solid black;
+    position: relative;
+}
+
+.main{
+    border: 0.2rem dotted darkcyan;
+}

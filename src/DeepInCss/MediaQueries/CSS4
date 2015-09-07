@@ -1,0 +1,54 @@
+div{
+    width:50px;
+    height:50px;
+    padding: 5px;
+    position: relative;
+}
+
+@media (min-width:1024px) and (min-height: 500px){
+    h1{
+        background-image: url('kosz.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        color:white;
+        height: 200px;
+        width: 100%;
+    }
+
+    li{
+        width:20%;
+    }
+
+    article{
+        width:200px;
+        position: relative;
+        left:400px;
+        bottom:80px
+    }
+
+    #red{
+        background-color: red;
+    }
+    #blue{
+        background-color: blue;
+        left:100px;
+        bottom:60px;
+    }
+    #yellow{
+        background-color: yellow;
+        left:200px;
+        bottom:120px;
+    }
+}
+
+@media (max-width:600px) and (max-height: 500px){
+    #red{
+        background-color: red;
+    }
+    #blue{
+        background-color: blue;
+    }
+    #yellow{
+        background-color: yellow;
+    }
+}
